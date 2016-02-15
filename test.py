@@ -18,7 +18,12 @@ class TestSuite(unittest.TestCase):
         app = FizzBuzz()
         app.run(100, output)
 
-        self.failIf(len(output.getvalue().splitlines()) == 100)
+        self.failIf(len(output.getvalue().splitlines()) != 100)
+	
+	self.failIf(app.calc(3) != "Fizz")
+	self.failIf(app.calc(5) != "Buzz")
+	self.failIf(app.calc(15) != "FizzBuzz")
+
 
 def main():
     unittest.main()
