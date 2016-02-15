@@ -20,12 +20,9 @@ class TestSuite(unittest.TestCase):
 
         self.failIf(len(output.getvalue().splitlines()) != 100)
 	
-	self.failIf(app.calc(12) != "Fizz")
-	self.failIf(app.calc(20) != "Buzz")
+	self.failIf(app.calc(3) != "Fizz")
+	self.failIf(app.calc(5) != "Buzz")
 	self.failIf(app.calc(15) != "FizzBuzz")
-	
-	self.failIf(app.calc(47) != "47 is a prime")
-	self.failIf(app.calc(59) != "59 is a prime")
 
 
 def main():
