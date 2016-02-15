@@ -22,7 +22,15 @@ class FizzBuzz():
 
     # Seems to give correct values. Tested with 1 and 2.
     def calc(self, i):
-    	if i % 3 == 0 and i % 5 == 0:
+	
+	if i < 2:
+	    return 1
+
+	elif all(i % x for x in xrange(2, i)):
+	    return "%s is a prime" % i
+
+
+	if i % 3 == 0 and i % 5 == 0:
 	    return "FizzBuzz"
 	elif i % 5 == 0:
 	    return "Buzz"
